@@ -1,0 +1,60 @@
+import objetos.*
+import bolichito.*
+import personas.*
+
+test "el rojo es un color fuerte"{
+    assert.that(rojo.esFuerte())
+}
+
+test "el celeste no es un color fuerte"{
+    assert.notThat(celeste.esFuerte())
+}
+
+test "puedo modificar el peso del muñeco"{
+    munieco.peso(600)
+    assert.equals(600, munieco.peso())
+}
+
+test "el peso original del munieco es 100"{
+    assert.equals(100, munieco.peso())
+}
+
+test "a Luisa no le gusta la remera"{
+    assert.notThat(luisa.leGusta(remera))
+}
+
+test "a Luisa le gusta el munieco"{
+    assert.that(luisa.leGusta(munieco))
+}
+
+test "a juan le gusta el arito"{
+    assert.that(juan.leGusta(arito))
+}
+
+test "a Rosa no le gusta la biblioteca"{
+    assert.notThat(rosa.leGusta(biblioteca))
+}
+
+test "el bolichito es Monocromatico"{
+    assert.that(bolichito.esMonocromatico())
+}
+
+test "el bolichito no es brillante"{
+    assert.notThat(bolichito.sonBrillantes())
+}
+
+test "el bolichito esta equilibrado"{
+    assert.that(bolichito.estaEquilibrado())
+}
+
+test "el Bolichito tiene un objeto de color Rojo"{
+    assert.that(bolichito.tieneObjetoDeColor(rojo))
+}
+
+test "el Bolichito se puede mejorar"{
+    assert.that(bolichito.puedeMejorar())
+}
+
+test "el Bolichito tiene algo que le gusta a Estefania"{
+    assert.that(bolichito.seLePuedeOfrecerA(estefania))
+}

@@ -3,10 +3,15 @@ import personas.*
 
 object bolichito {
     var objetoEnVidriera = remera
-    var objetoEnMostrador = pelota
+    var objetoEnMostrador = cajita
+
+    method reemplazarObjetos(enMostrador, enVidriera){
+        objetoEnMostrador = enMostrador
+        objetoEnVidriera = enVidriera
+    }
     
-    method sonBrillantes() = objetoEnVidriera.esBrillante()
-    && objetoEnMostrador.esBrillante()
+    method sonBrillantes() = objetoEnVidriera.material().esBrillante()
+    && objetoEnMostrador.material().esBrillante()
 
     method esMonocromatico() = objetoEnMostrador.color()
     == objetoEnVidriera.color()
@@ -20,7 +25,7 @@ object bolichito {
     method puedeMejorar() = !self.estaEquilibrado() 
     || self.esMonocromatico()
 
-    method seLoPuedeOfrecer(unaPersona) =
+    method seLePuedeOfrecerA(unaPersona) =
         unaPersona.leGusta(objetoEnMostrador) || unaPersona.leGusta(objetoEnVidriera)
 
 }

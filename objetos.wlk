@@ -17,17 +17,17 @@ object biblioteca{
   method material() {return madera}
 }
 object munieco{
-  var peso = 0
+  var peso = 100
   method peso(unPeso) {peso = unPeso} //indicación
-  method peso() //consulta
+  method peso() = peso //consulta
   method color() = celeste
   method material() = vidrio
 }
 object placa{
-  var peso = 0
+  var peso = 2000
   var color = rojo
   method peso(unPeso) {peso = unPeso}
-  method peso() {return 8000}
+  method peso() = peso
   method color(unColor) {color = unColor}
   method color() = color
   method material() {return cobre}
@@ -48,7 +48,7 @@ object banquito{
 }
 
 object cajita{
-  var objetoAdentro = arito
+  var objetoAdentro = placa
   method guardarObjeto(unObjeto){objetoAdentro = unObjeto}
   method objetoAdentro() = objetoAdentro
   method peso() = 400 + objetoAdentro.peso()
@@ -76,18 +76,18 @@ object naranja{
 
 //materiales
 
-object cobre(){
+object cobre{
   method esBrillante() = true
 }
-object vidrio(){
+object vidrio{
   method esBrillante() = true
 }
-object lino(){
+object lino{
   method esBrillante() = false
 }
 object madera{
   method esBrillante() = false
 }
-object cuero(){
+object cuero{
   method esBrillante() = false
 }
